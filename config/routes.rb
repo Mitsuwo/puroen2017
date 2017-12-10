@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   get 'home/index'
 
+  get 'choose/specialized' => 'choose#specialized'
+  get 'choose/literary' => 'choose#literary'
+
   root 'home#index'
   resources :posts
 
