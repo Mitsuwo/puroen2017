@@ -1,0 +1,13 @@
+<h1>一覧</h1>
+
+<% @category.books.each do |category| %>
+<div>
+  <div class="">
+    <%= image_tag category.image_url %>
+  </div>
+  <div>
+    <%= category.name %>
+  </div>
+</div>
+
+<% end %>
