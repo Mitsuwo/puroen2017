@@ -1,13 +1,18 @@
 <h1>一覧</h1>
 
-<% @category.books.each do |category| %>
 <div>
   <div class="">
-    <%= image_tag category.image_url %>
-  </div>
-  <div>
-    <%= category.name %>
+    <ul class="" >
+      <% @category.books.each do |category| %>
+      <li class="">
+        <div class="">
+          <%= image_tag category.image_url %>
+        </div>
+        <div class="">
+          <%= category.name %>
+        </div>
+      </li>
+      <% end %>
+    </ul>
   </div>
 </div>
-
-<% end %>
