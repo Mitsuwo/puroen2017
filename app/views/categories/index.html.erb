@@ -1,18 +1,13 @@
 <h1>一覧</h1>
 
-<div>
-  <div class="">
-    <ul class="" >
-      <% @category.books.each do |category| %>
-      <li class="">
-        <div class="">
-          <%= image_tag category.image_url %>
-        </div>
-        <div class="">
-          <%= category.name %>
-        </div>
-      </li>
-      <% end %>
-    </ul>
+<div class="row">
+  <% @category.books.each do |category| %>
+  <div class="large-3 columns">
+    <div class="inner">
+      <p class="eyecatch"><%= image_tag category.image_url %></p>
+      <strong><%= category.name %></strong>
+      <p class="text-right more"><%= link_to '選書する', category_path(@category) %></p>
+    </div>
   </div>
+  <% end %>
 </div>

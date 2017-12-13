@@ -1,4 +1,26 @@
+.inner {
+  border: 1px solid #ddd;
+  padding: 15px;
+}
 
+.eyecatch {
+  margin-bottom: 1em;
+  & img {
+    width: 480;
+  }
+}
+
+.columns {
+  margin-bottom: 30px;
+}
+
+.desc {
+  font-size: 12px;
+}
+
+.more {
+  margin-bottom: 0;
+}
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
