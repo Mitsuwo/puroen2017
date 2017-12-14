@@ -24,3 +24,5 @@ end
 
 Category.create(id:1, name:'専門図書')
 Category.create(id:2, name:'文芸書')
+
+User.create(id:1, email:'g031n061@s.iwate-pu.ac.jp', password:'password')
