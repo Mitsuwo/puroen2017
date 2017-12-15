@@ -10,4 +10,5 @@
     </div>
   </div>
   <% end %>
+  <%= paginate @category.books.page(params[:page]) %>
 </div>
