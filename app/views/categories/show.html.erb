@@ -1,3 +1,17 @@
 <h1>書籍情報</h1>
 
-<%= @book.name %>
+<div class="">
+  <%= image_tag @book.image_url %>
+</div>
+<div class="">
+  <%= @book.name %>
+</div>
+<div class="">
+  <%= @book.description %>
+</div>
+<div class="">
+  <%= @book.publisher %>
+</div>
+<div class="">
+  <%= @book.publish_date %>
+</div>
