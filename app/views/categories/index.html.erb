@@ -5,7 +5,7 @@
   <div class="large-3 columns">
     <div class="inner">
       <p class="eyecatch"><%= image_tag category.image_url %></p>
-      <strong><%= category.name %></strong>
+      <strong><%= link_to category.name, category_path(id: category.id) %></strong>
       <p class="text-right more"><%= link_to '選書する', category_path(@category) %></p>
     </div>
   </div>

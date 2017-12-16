@@ -3,7 +3,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @books = Book.category.find(params[:id])
+    @book = Book.find(params[:id])
   end
 
   def index
