@@ -18,6 +18,7 @@ gem 'devise'
 gem "foundation-rails"
 gem 'ransack', '~> 1.8', '>= 1.8.4'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
+gem 'haml', '~> 5.0', '>= 5.0.4'
 
 group :development, :test do
   gem 'byebug', platform: :mri
