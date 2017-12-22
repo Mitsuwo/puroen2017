@@ -1,5 +1,7 @@
 class Book < ApplicationRecord
   belongs_to :category
   has_one :choose, dependent: :destroy
-  has_one :choosing_user, through: :choose, source: :user
+  def choose_user(user_id)
+    chooses.find_by(user_id: user_id)
+  end
 end

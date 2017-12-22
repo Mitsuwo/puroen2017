@@ -1,0 +1,13 @@
+<% if user_signed_in? %>
+  <% if book.choose_user(current_user.id) %>
+    <%= button_to book_choose_path(choose, book_id: book.id), method: :delete, id: "choose-button", remote: true do %>
+      <%= image_tag("icon_red_heart.svg") %>
+    <% end %>
+  <% else %>
+    <%= button_to book_chooses_path(book), id: "choose-button", remote: true do %>
+      <%= image_tag("icon_heart.svg") %>
+    <% end %>
+  <% end %>
+<% else %>
+  <%= image_tag("icon_heart.svg") %>
+<% end %>

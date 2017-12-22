@@ -8,5 +8,7 @@ class CategoriesController < ApplicationController
 
   def index
     @category = Category.find(params[:id])
+    @books = @category.books
+    @chooses = Choose.all
   end
 end

@@ -6,7 +6,7 @@
     <div class="inner">
       <p class="eyecatch"><%= image_tag category.image_url %></p>
       <strong><%= link_to category.name, category_path(id: category.id) %></strong>
-      <p class="text-right more"><%= link_to '選書する', category_path(@category) %></p>
+      <p class="text-right more"><%= render partial: 'chooses/choose', locals: { book: @books.find_by(id: category.id), chooses: @chooses.where(book_id: category.id) } %></p>
     </div>
   </div>
   <% end %>
