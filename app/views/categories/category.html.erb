@@ -2,6 +2,6 @@
 
 <% Category.all.each do |category| %>
 <div>
-  <%= link_to category.name, categories_index_path(id: category.id) %>
+  <%= link_to category.name, books_index_path(id: category.id) %>
 </div>
 <% end %>

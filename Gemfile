@@ -21,6 +21,7 @@ gem 'kaminari', '~> 1.1', '>= 1.1.1'
 gem 'haml-rails'
 gem 'erb2haml'
 gem "font-awesome-rails"
+gem 'slim-rails'
 
 
 group :development, :test do
