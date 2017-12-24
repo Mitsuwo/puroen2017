@@ -1,13 +1,13 @@
 <% if user_signed_in? %>
-  <div class="choose-link" id="choose-<%= book.id %>">
+  <div class="" id="choose-link-<%= book.id %>">
     <% if current_user.chooses.find_by(book_id: book.id) %>
-      <%= link_to book_choose_path(choose, book_id: book.id), method: :delete, remote: true do %>
+      <%= link_to delete_choose_path(book.id), method: :delete, remote: true do %>
       <div class="fi-minus" id="choose-<%= book.id %>">
         <%= book.chooses.count.to_s %>
       </div>
       <% end %>
     <% else %>
-      <%= link_to book_chooses_path(book), method: :post, remote: true do %>
+      <%= link_to post_choose_path(book.id), method: :post, remote: true do %>
       <div class="fi-plus" id="choose-<%= book.id %>">
         <%= book.chooses.count.to_s %>
       </div>

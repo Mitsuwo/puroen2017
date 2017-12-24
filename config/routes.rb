@@ -6,10 +6,11 @@ Rails.application.routes.draw do
 
   resources :posts
   resources :categories
-
   resources :books do
-    resources :chooses, only: [:create, :destroy]
   end
+
+  post   '/chooses/:book_id' => 'chooses#post_choose',   as: 'post_choose'
+  delete '/chooses/:book_id' => 'chooses#delete_choose', as: 'delete_choose'
 
   root 'home#index'
 end
