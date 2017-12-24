@@ -1,0 +1,14 @@
+<h1>一覧</h1>
+
+<div class="row">
+  <% @books.each do |book| %>
+  <div class="large-3 columns">
+    <div class="inner">
+      <p class="eyecatch"><%= image_tag book.image_url %></p>
+      <strong><%= link_to book.name, category_path(id: book.id) %></strong>
+      <p class="text-right more"><%= render partial: 'books/books', locals: { book: @books.find(book.id) } %></p>
+    </div>
+  </div>
+  <% end %>
+  <%= paginate @category.books.page(params[:page]) %>
+</div>

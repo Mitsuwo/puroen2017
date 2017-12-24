@@ -1,16 +1,22 @@
 class ChoosesController < ApplicationController
+  before_action :set_book_variables
 
-  def create
-    @choose = Choose.create(user_id: @current_user.id, book_id: params[:book_id])
-    @chooses = Choose.where(book_id: params[:book_id])
-    @books = Book.all
+  def post_choose
+    choose = current_user.chooses.new(user_id: current_user.id, book_id: @book.id)
+    choose.save
   end
 
-  def destroy
-    choose = Choose.find_by(user_id: current_user.id, book_id: params[:book_id])
+  def destroy_choose
+    choose = current_user.chooses.find_by(user_id: current_user.id, book_id: @book.id)
     choose.destroy
-    @chooses = Choose.where(book_id: params[:book_id])
-    @books = Book.all
+  end
+
+  private
+
+  def set_book_variables
+    @book = Book.find(params[:book_id])
+    @id_name = "choose-link-#{@book.id}"
+    @id_choose = "#choose-#{@book.id}"
   end
 
 end

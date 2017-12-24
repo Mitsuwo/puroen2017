@@ -6,6 +6,9 @@
 
     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
 
+    <!-- font awsome導入 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
