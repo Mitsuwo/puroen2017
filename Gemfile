@@ -22,7 +22,7 @@ gem 'haml-rails'
 gem 'erb2haml'
 gem "font-awesome-rails"
 gem 'slim-rails'
-
+gem 'foundation-icons-sass-rails'
 
 group :development, :test do
   gem 'byebug', platform: :mri

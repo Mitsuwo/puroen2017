@@ -1,13 +1,20 @@
 <% if user_signed_in? %>
-  <% if current_user.chooses.find_by(book_id: book.id) %>
-    <%= link_to book_choose_path(choose, book_id: book.id), method: :delete, id: "chooses-button-#{book.id}", remote: true do %>
-      <i class="fa fa-heart"></i>
+  <div class="choose-link" id="choose-<%= book.id %>">
+    <% if current_user.chooses.find_by(book_id: book.id) %>
+      <%= link_to book_choose_path(choose, book_id: book.id), method: :delete, remote: true do %>
+      <div class="fi-minus" id="choose-<%= book.id %>">
+        <%= book.chooses.count.to_s %>
+      </div>
+      <% end %>
+    <% else %>
+      <%= link_to book_chooses_path(book), method: :post, remote: true do %>
+      <div class="fi-plus" id="choose-<%= book.id %>">
+        <%= book.chooses.count.to_s %>
+      </div>
+      <% end %>
     <% end %>
-  <% else %>
-    <%= link_to book_chooses_path(book), id: "chooses-button-#{book.id}", method: :post, remote: true do %>
-      <i class="fa fa-heart-o"></i>
-    <% end %>
-  <% end %>
 <% else %>
-  <i class="fa fa-heart-o"></i>
+  <div class="fi-plus">
+    <%= book.chooses.count.to_s %>
+  </div>
 <% end %>
