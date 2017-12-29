@@ -18,11 +18,9 @@ gem 'devise'
 gem "foundation-rails"
 gem 'ransack', '~> 1.8', '>= 1.8.4'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
-gem 'haml-rails'
-gem 'erb2haml'
 gem "font-awesome-rails"
-gem 'slim-rails'
 gem 'foundation-icons-sass-rails'
+gem 'simple_form', '~> 3.5'
 
 group :development, :test do
   gem 'byebug', platform: :mri

@@ -3,12 +3,10 @@
 <ul class="medium-block-grid-4 small-block-grid-2">
   <% @books.each do |book| %>
     <li>
-      <div class="columns">
-        <div class="inner">
-          <p class="eyecatch"><%= image_tag book.image_url %></p>
-          <strong><%= link_to book.name, category_path(id: book.id) %></strong>
-          <p class="text-right more"><%= render partial: 'books/books', locals: { book: @books.find(book.id) } %></p>
-        </div>
+      <div class="inner">
+        <p class="eyecatch"><%= image_tag book.image_url %></p>
+        <strong><%= link_to book.name, category_path(id: book.id) %></strong>
+        <p class="text-right more"><%= render partial: 'books/books', locals: { book: @books.find(book.id) } %></p>
       </div>
     </li>
     <% end %>

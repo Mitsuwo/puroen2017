@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :chooses, dependent: :destroy
+  has_one :choose, dependent: :destroy
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable

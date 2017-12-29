@@ -1,21 +1,9 @@
-<nav class="top-bar">
-  <ul class="title-area">
-    <li class="name">
-      <a href="<%= home_index_path %>">選書ツアー</a>
-    </li>
-  </ul>
-  <section class="top-bar-section">
-    <ul class="right">
-      <li class="divider"></li>
-      <li>
-        <% if user_signed_in? %>
-          <li><%= link_to "設定変更", edit_user_registration_path %></li>
-          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
-        <% else %>
-          <li><%= link_to "ログイン", new_user_session_path %></li>
-        <% end %>
-      </li>
-      <li class="divider"></li>
-    </ul>
-  </section>
-</nav>
+<a href="<%= home_index_path %>" class="head-box"><h5>センショ<br>ツアー</h5></a>
+<ul class="list-nav">
+  <% if user_signed_in? %>
+    <li><%= link_to "設定変更", edit_user_registration_path %></li>
+    <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+  <% else %>
+    <li><%= link_to "ログイン", new_user_session_path %></li>
+  <% end %>
+</ul>

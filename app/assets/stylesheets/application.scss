@@ -22,6 +22,50 @@
   margin-bottom: 0;
 }
 
+.head-box {
+  width: 110px;
+  height: 110px;
+  background-color: #66CDAA;
+  position: fixed;
+  z-index: 2;
+  left: 120px;
+  text-align: center;
+  display: table;
+}
+.head-box h5 {
+  font-family: 'Lato', 'Noto Sans Japanese', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  color: #FFFFFF;
+  display: table-cell;
+  vertical-align: middle;
+}
+.head-box:hover {
+  filter:alpha(opacity=80);
+  opacity:0.8;
+}
+
+ul.list-nav {
+  display: table;
+  margin-left: auto;
+  text-align: center;
+  width: 20%;
+  height: 60px;
+  z-index: 1;
+}
+ul.list-nav li {
+  display: table-cell;
+  vertical-align: middle;
+  width: 10%;
+}
+
+.back-ground {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 60px;
+}
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -37,7 +81,7 @@
  *= require_tree .
  *= require_self
  *= require font-awesome
- *= require foundation 
+ *= require foundation
  //= require foundation_and_overrides
 
  */
