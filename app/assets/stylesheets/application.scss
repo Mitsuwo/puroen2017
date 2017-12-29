@@ -27,7 +27,7 @@
   height: 110px;
   background-color: #66CDAA;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   left: 120px;
   text-align: center;
   display: table;
@@ -42,14 +42,18 @@
   filter:alpha(opacity=80);
   opacity:0.8;
 }
-
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  background-color: #FFFFFF;
+}
 ul.list-nav {
   display: table;
   margin-left: auto;
   text-align: center;
   width: 20%;
   height: 60px;
-  z-index: 1;
 }
 ul.list-nav li {
   display: table-cell;
@@ -64,6 +68,31 @@ ul.list-nav li {
   width: 100%;
   position: fixed;
   top: 60px;
+  -webkit-filter: grayscale(50%);
+}
+
+.toppage {
+  z-index: 1;
+  top: 1000px;
+  position: relative;
+  background-color: #FFFFFF;
+  text-align: center;
+}
+
+.cssco.cssco--t1 {
+    background-color: #9d9990;
+}
+
+.cssco.cssco--t1:after {
+    background-color: #878787;
+    mix-blend-mode: lighten;
+    opacity: 0.5;
+}
+
+.cssco.cssco--t1 img {
+    -webkit-filter: grayscale(20%) contrast(140%);
+            filter: grayscale(20%) contrast(140%);
+    mix-blend-mode: hard-light;
 }
 
 /*
