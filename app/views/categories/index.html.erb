@@ -1,14 +1,13 @@
-<h1>一覧</h1>
-
-<ul class="medium-block-grid-4 small-block-grid-2">
-  <% @books.each do |book| %>
-    <li>
-      <div class="inner">
-        <p class="eyecatch"><%= image_tag book.image_url %></p>
-        <strong><%= link_to book.name, category_path(id: book.id) %></strong>
-        <p class="text-right more"><%= render partial: 'books/books', locals: { book: @books.find(book.id) } %></p>
-      </div>
-    </li>
-    <% end %>
-</ul>
-<%= paginate @category.books.page(params[:page]) %>
+<div class="block-table" style="position:relative;">
+  <ul class="medium-block-grid-4 small-block-grid-2">
+    <% @books.each do |book| %>
+      <li>
+        <div class="">
+          <a href="<%= category_path(id: book.id) %>"><%= image_tag book.image_url %></a>
+          <p class="text-right more"><%= render partial: 'books/books', locals: { book: @books.find(book.id) } %></p>
+        </div>
+      </li>
+      <% end %>
+  </ul>
+  <%= paginate @category.books.page(params[:page]) %>
+</div>

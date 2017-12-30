@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'categories/index'
   get 'home/index'
 
+  resources :users
   resources :posts
   resources :categories
   resources :books do

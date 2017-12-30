@@ -3,13 +3,6 @@
   padding: 15px;
 }
 
-.eyecatch {
-  margin-bottom: 1em;
-  & img {
-    width: 480;
-  }
-}
-
 .columns {
   margin-bottom: 30px;
 }
@@ -31,6 +24,7 @@
   left: 120px;
   text-align: center;
   display: table;
+  margin-top: 0;
 }
 .head-box h5 {
   font-family: 'Lato', 'Noto Sans Japanese', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
@@ -38,8 +32,9 @@
   display: table-cell;
   vertical-align: middle;
 }
+.left-icon:hover,
+.right-icon:hover,
 .head-box:hover {
-  filter:alpha(opacity=80);
   opacity:0.8;
 }
 .navbar {
@@ -78,21 +73,34 @@ ul.list-nav li {
   background-color: #FFFFFF;
   text-align: center;
 }
-
-.cssco.cssco--t1 {
-    background-color: #9d9990;
+.icon-table {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 120px 0;
+  margin: auto;
+}
+.ch-icon {
+  color: #66CDAA;
+  vertical-align: middle;
+  font-size: 200px;
 }
 
-.cssco.cssco--t1:after {
-    background-color: #878787;
-    mix-blend-mode: lighten;
-    opacity: 0.5;
+.right-icon,
+.left-icon {
+  width: 300px;
+  height: 300px;
+  display: table-cell;
+  border: 10px solid #66CDAA;
+}
+.left-icon h3,
+.right-icon h3 {
+  color: #66CDAA;
 }
 
-.cssco.cssco--t1 img {
-    -webkit-filter: grayscale(20%) contrast(140%);
-            filter: grayscale(20%) contrast(140%);
-    mix-blend-mode: hard-light;
+.block-table {
+  margin-right: 200px;
+  margin-left: 200px;
+  top:200px;
 }
 
 /*
