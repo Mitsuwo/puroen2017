@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :users
   resources :posts
   resources :categories
+  resources :comments
   resources :books do
   end
 
