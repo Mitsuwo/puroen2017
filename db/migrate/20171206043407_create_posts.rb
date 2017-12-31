@@ -4,7 +4,7 @@ class CreatePosts < ActiveRecord::Migration[5.0]
       t.integer :post_id
       t.integer :user_id
       t.string :name
-      t.text :publisher
+      t.string :publisher
       t.string :publish_date
       t.integer :rate
       t.text :body

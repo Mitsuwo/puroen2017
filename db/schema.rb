@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 20171231121315) do
     t.integer  "post_id"
     t.integer  "user_id"
     t.string   "name"
-    t.text     "publisher"
+    t.string   "publisher"
     t.string   "publish_date"
     t.integer  "rate"
     t.text     "body"
