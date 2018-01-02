@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   # []内のアクションはログインしてないとできないようにする
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
-  
+
   # GET /posts
   # GET /posts.json
   def index
@@ -13,6 +13,8 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @comments = Comment.where(post_id: params[:id])
+    @comment = Comment.new(user_id: current_user.id, post_id: params[:id])
   end
 
   # GET /posts/new
@@ -72,6 +74,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:post_id, :user_id, :name, :publisher, :publish_date, :rate, :body)
+      params.require(:post).permit(:post_id, :user_id, :name, :publisher, :publish_date, :rate, :body, :image_url)
     end
 end

@@ -128,6 +128,21 @@ ul.list-nav li {
   position: relative;
   top: 120px;
 }
+.panel-table {
+  display: table;
+  width: 90%;
+  margin: auto;
+}
+.panel-image {
+  display: table-cell;
+  width: 30%;
+  margin: auto;
+}
+.panel-desc {
+  display: table-cell;
+  width: 50%;
+  margin: auto;
+}
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

@@ -1,39 +1,51 @@
-<p id="notice"><%= notice %></p>
+<div style="top:120px;position:relative;">
+  <div class="panel">
+    <div class="panel-table">
+      <div class="panel-image">
+        <p>
+          <%= image_tag @post.image_url %>
+        </p>
+      </div>
+      <div class="panel-desc">
+        <p>
+          <strong>User:</strong>
+          <%= @post.user_id %>
+        </p>
 
-<p>
-  <strong>Post:</strong>
-  <%= @post.post_id %>
-</p>
+        <p>
+          <strong>Name:</strong>
+          <%= @post.name %>
+        </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @post.user_id %>
-</p>
+        <p>
+          <strong>Publisher:</strong>
+          <%= @post.publisher %>
+        </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @post.name %>
-</p>
+        <p>
+          <strong>Publish date:</strong>
+          <%= @post.publish_date %>
+        </p>
 
-<p>
-  <strong>Publisher:</strong>
-  <%= @post.publisher %>
-</p>
+        <p>
+          <strong>Rate:</strong>
+          <%= @post.rate %>
+        </p>
 
-<p>
-  <strong>Publish date:</strong>
-  <%= @post.publish_date %>
-</p>
+        <p>
+          <strong>Body:</strong>
+          <%= @post.body %>
+        </p>
+      </div>
+    </div>
 
-<p>
-  <strong>Rate:</strong>
-  <%= @post.rate %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @post.body %>
-</p>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+    <%= link_to 'Edit', edit_post_path(@post) %> |
+    <%= link_to 'Back', posts_path %>
+    <br><hr><br>
+    <%= render 'comments/form', comment: @comment %>
+    <%= link_to 'コメントする', new_comment_path %><br>
+    <% @comments.each do |comment| %>
+      <% comment.body %>
+    <% end %>
+  </div>
+</div>
