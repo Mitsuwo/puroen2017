@@ -6,7 +6,17 @@
     <%= f.input :image_url, label: '画像URL' %>
     <%= f.input :body, label: '本文' %>
     <%= f.input :publish_date, as: :datepicker, label: "出版日" %>
+    <div id="star">
+      <%= f.hidden_field :rate, label: :rate %>
+    </div>
+    <div id="star"></div><br>
     <%= f.button :submit, "投稿する" %>
   <% end %>
   <%= link_to 'Back', posts_path %>
 </div>
+
+<script>
+$(function(){
+  $('#star').raty();
+});
+</script>

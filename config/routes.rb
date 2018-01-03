@@ -8,8 +8,7 @@ Rails.application.routes.draw do
   resources :posts
   resources :categories
   resources :comments
-  resources :books do
-  end
+  resources :books
 
   post   '/chooses/:book_id' => 'chooses#post_choose',   as: 'post_choose'
   delete '/chooses/:book_id' => 'chooses#delete_choose', as: 'delete_choose'
