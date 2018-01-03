@@ -1,11 +1,7 @@
 <div style="top:120px;position:relative;">
   <h1>本紹介一覧</h1>
   <% @posts.each do |post| %>
-    <%= post.name %>
     <a href="<%= post_path(id: post.id) %>"><%= image_tag post.image_url %></a>
-    <%= link_to post.name, post %>
-    <%= link_to 'Edit', edit_post_path(post) %>
-    <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
   <% end %>
 
   <br>

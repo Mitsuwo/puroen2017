@@ -19,7 +19,7 @@ end
   Category.create(id:i, name:"カテゴリ#{i}")
 end
 
-User.create(id:1, email:'g031n061@s.iwate-pu.ac.jp', password:'password')
+User.create(id:1, email:'g031n061@s.iwate-pu.ac.jp', password:'password', name:"近藤充真")
 Book.create(
     id:1,
     name:'超速! Webページ速度改善ガイド ── 使いやすさは「速さ」から始まる (WEB+DB PRESS plus) ',

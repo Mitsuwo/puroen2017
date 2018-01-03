@@ -7,35 +7,12 @@
         </p>
       </div>
       <div class="panel-desc">
-        <p>
-          <strong>User:</strong>
-          <%= @post.user_id %>
-        </p>
-
-        <p>
-          <strong>Name:</strong>
-          <%= @post.name %>
-        </p>
-
-        <p>
-          <strong>Publisher:</strong>
-          <%= @post.publisher %>
-        </p>
-
-        <p>
-          <strong>Publish date:</strong>
-          <%= @post.publish_date %>
-        </p>
-
-        <p>
-          <strong>Rate:</strong>
-          <%= @post.rate %>
-        </p>
-
-        <p>
-          <strong>Body:</strong>
-          <%= @post.body %>
-        </p>
+        <h4><%= @post.name %></h4>
+        <h5><%= @post.publisher %>より出版</h5>
+        <p><%= @post.user.name %></p>
+        <p>レート</p>
+        <div><%= @post.rate %></div>
+        <div><%= @post.body %></div>
       </div>
     </div>
 
@@ -43,9 +20,12 @@
     <%= link_to 'Back', posts_path %>
     <br><hr><br>
     <%= render 'comments/form' %>
+    <br>
+    <h3>コメント一覧</h3>
     <% @comments.each do |comment| %>
-
+      <hr>
       <%= comment.body %>
+      <%= comment.created_at %>
     <% end %>
   </div>
 </div>
