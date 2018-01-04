@@ -1,13 +1,12 @@
-<div class="block-table" style="position:relative;">
-  <ul class="medium-block-grid-4 small-block-grid-2">
+<div style="top:200px;position:relative;">
+  <div class="row">
     <% @books.each do |book| %>
-      <li>
-        <div class="">
-          <a href="<%= category_path(id: book.id) %>"><%= image_tag book.image_url %></a>
-          <p class="text-right more"><%= render partial: 'books/books', locals: { book: @books.find(book.id) } %></p>
+
+        <div class="columns medium-4">
+          <a href="<%= category_path(id: book.id) %>"><%= image_tag book.image_url, class: "book"%></a>
         </div>
-      </li>
-      <% end %>
-  </ul>
-  <%= paginate @category.books.page(params[:page]) %>
+
+    <% end %>
+  </div>
+    <%= paginate @category.books.page(params[:page]) %>
 </div>

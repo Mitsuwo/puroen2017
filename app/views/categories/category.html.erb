@@ -1,7 +1,10 @@
-<h1>カテゴリ一覧</h1>
+<div style="top:200px;position:relative;text-align:center;">
+  <h1>カテゴリ一覧</h1>
+  <% Category.all.each do |category| %>
 
-<% Category.all.each do |category| %>
-<div>
-  <%= link_to category.name, categories_index_path(id: category.id) %>
+       <div>
+         <%= link_to category.name, categories_index_path(id: category.id) %>
+       </div>
+
+  <% end %>
 </div>
-<% end %>

@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+  before_action :set_books, only: [:show, :index]
+
   def category
   end
 
@@ -7,6 +9,11 @@ class CategoriesController < ApplicationController
   end
 
   def index
+  end
+
+  private
+
+  def set_books
     @category = Category.find(params[:id])
     @books = @category.books
   end

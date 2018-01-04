@@ -15,3 +15,4 @@
 <div class="">
   <%= @book.publish_date %>
 </div>
+<div><%= render partial: 'books/books', locals: { book: @books.find(@book.id) } %></div>
