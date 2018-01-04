@@ -1,8 +1,19 @@
-<div style="top:120px;position:relative;">
+<div style="top:120px;position:relative;text-align:center;">
   <h1>本紹介一覧</h1>
-  <% @posts.each do |post| %>
-    <a href="<%= post_path(id: post.id) %>"><%= image_tag post.image_url %></a>
-  <% end %>
+  <br><br>
+  <div class="row">
+
+       <% @posts.each do |post| %>
+
+           <div class="columns medium-4">
+             <a href="<%= post_path(id: post.id) %>">
+               <%= image_tag post.image_url, class: "book" %>
+             </a>
+           </div>
+
+       <% end %>
+
+  </div>
 
   <br>
 
