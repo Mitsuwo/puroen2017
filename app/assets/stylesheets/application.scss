@@ -28,6 +28,19 @@
 	padding: 1.5em 1.25em;
 }
 
+.set {
+  top: 200px;
+  position: relative;
+}
+
+.desc {
+  top: 200px;
+  position: relative;
+  display: table;
+  margin: auto;
+  width: 90%;
+}
+
 .pitch {
   font-size: 75px;
   color: #FFFFFF;
@@ -53,10 +66,6 @@
 }
 .columns {
   margin-bottom: 30px;
-}
-
-.desc {
-  font-size: 12px;
 }
 
 .more {

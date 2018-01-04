@@ -1,18 +1,15 @@
-<h1>書籍情報</h1>
-
-<div class="">
-  <%= image_tag @book.image_url %>
+<div class="desc">
+  <div class="panel-image">
+    <h1>書籍情報</h1>
+    <%= image_tag @book.image_url %>
+  </div>
+  <div class="panel-desc">
+    <div><%= @book.name %></div>
+    <div><%= @book.publisher %></div>
+    <div><%= @book.description %></div>
+    <div><%= @book.publish_date %></div>
+    <div>
+      <%= render partial: 'books/books', locals: { book: @books.find(@book.id) } %>
+    </div>
+  </div>
 </div>
-<div class="">
-  <%= @book.name %>
-</div>
-<div class="">
-  <%= @book.description %>
-</div>
-<div class="">
-  <%= @book.publisher %>
-</div>
-<div class="">
-  <%= @book.publish_date %>
-</div>
-<div><%= render partial: 'books/books', locals: { book: @books.find(@book.id) } %></div>
