@@ -22,6 +22,8 @@ gem "font-awesome-rails"
 gem 'foundation-icons-sass-rails'
 gem 'simple_form', '~> 3.5'
 gem 'jquery-raty-rails', github: 'bmc/jquery-raty-rails'
+gem 'hirb'
+gem 'hirb-unicode'
 
 group :development, :test do
   gem 'byebug', platform: :mri

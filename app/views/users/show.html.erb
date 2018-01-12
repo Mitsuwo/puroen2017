@@ -1,1 +1,14 @@
-<p class="set">This is mypage</p>
+<div class="row set">
+  <h1>マイページ</h1>
+  <div class="panel columns large-5">
+    <h3><%= @user.name %>さんが選書した本</h3>
+    <% current_user.books.each do |book| %>
+      <a href="/categories/<%= book.category_id %>" >
+        <%= image_tag book.image_url %>
+      </a>
+    <% end %>
+  </div>
+  <div class="panel columns large-7">
+    <h3><%= @user.name %>さんがいいねした投稿</h3>
+  </div>
+</div>

@@ -3,7 +3,9 @@
     <% @books.each do |book| %>
 
         <div class="columns medium-4">
-          <a href="<%= category_path(id: book.id) %>"><%= image_tag book.image_url, class: "book"%></a>
+          <a href="/categories/<%= book.id %>">
+            <%= image_tag book.image_url, class: "book"%>
+          </a>
         </div>
 
     <% end %>

@@ -9,7 +9,7 @@
     <div><%= @book.description %></div>
     <div><%= @book.publish_date %></div>
     <div>
-      <%= render partial: 'books/books', locals: { book: @books.find(@book.id) } %>
+      <%= render partial: 'books/books', locals: { book: @book } %>
     </div>
   </div>
 </div>
