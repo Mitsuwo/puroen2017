@@ -1,0 +1,8 @@
+<div class="massage">
+  <h1>お問い合わせ</h1>
+  <%= simple_form_for @message do |f| %>
+    <%= f.input :title, label: 'タイトル' %>
+    <%= f.input :body, label: '本文' %>
+    <%= f.button :submit, '送信する' %>
+  <% end %>
+</div>
