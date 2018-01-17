@@ -29,6 +29,18 @@
 }
 .message {
   background-color: #66CDAA;
+  text-align: center;
+  bottom: 0px;
+  height: 100%;
+}
+.message-box {
+  width:60%;
+  margin:auto;
+  background-color: #FFFFFF;
+
+}
+.message-content {
+  margin: 100px;
 }
 .set {
   top: 200px;

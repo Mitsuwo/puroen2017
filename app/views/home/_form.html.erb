@@ -1,8 +1,12 @@
-<div class="massage">
-  <h1>お問い合わせ</h1>
-  <%= simple_form_for @message do |f| %>
-    <%= f.input :title, label: 'タイトル' %>
-    <%= f.input :body, label: '本文' %>
-    <%= f.button :submit, '送信する' %>
-  <% end %>
+<div class="message"><br><br>
+  <h3 style="color:white;vertical-align:bottom;">お問い合わせ</h3>
+  <div class="message-box">
+    <div class="message-content">
+      <%= simple_form_for @message do |f| %><br><br><br><br>
+        <%= f.input :title, label: 'タイトル' %>
+        <%= f.input :body, label: '本文' %>
+        <%= f.button :submit, '送信する' %>
+      <% end %>
+    </div>
+  </div>
 </div>
