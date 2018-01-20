@@ -1,14 +1,12 @@
-<div class="set">
-  <div class="row">
-    <% @books.each do |book| %>
+<div class="set row">
+  <% @books.each do |book| %>
 
-        <div class="columns medium-4">
-          <a href="/categories/<%= book.id %>">
-            <%= image_tag book.image_url, class: "book"%>
-          </a>
-        </div>
+    <div class="columns medium-4">
+      <a href="/categories/<%= book.id %>">
+        <%= image_tag book.image_url, class: "book"%>
+      </a>
+    </div>
 
-    <% end %>
-  </div>
-    <%= paginate @category.books.page(params[:page]) %>
+  <% end %>
+  <%= paginate @category.books.page(params[:page]) %>
 </div>

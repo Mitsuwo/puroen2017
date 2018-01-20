@@ -15,9 +15,17 @@
   )
 end
 
-15.times do |i|
-  Category.create(id:i, name:"カテゴリ#{i}")
-end
+
+Category.create(id:1, name:"総記", icon:"university")
+Category.create(id:2, name:"哲学", icon:"mortar-board")
+Category.create(id:3, name:"歴史", icon:"history")
+Category.create(id:4, name:"社会科学", icon:"legal")
+Category.create(id:5, name:"自然科学", icon:"globe")
+Category.create(id:6, name:"技術・工学・工業", icon:"rocket")
+Category.create(id:7, name:"産業", icon:"line-chart")
+Category.create(id:8, name:"芸術", icon:"paint-brush")
+Category.create(id:9, name:"言語", icon:"language")
+Category.create(id:10, name:"文学", icon:"pencil")
 
 User.create(id:1, email:'g031n061@s.iwate-pu.ac.jp', password:'password', name:"近藤充真")
 User.create(id:2, email:'g031o124@s.iwate-pu.ac.jp', password:'password', name:"芳賀康太")
