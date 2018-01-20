@@ -1,5 +1,10 @@
 class HomeController < ApplicationController
   def index
-    @message = current_user.messages.new
+    if user_signed_in?
+      @message = current_user.messages.new
+    elsif
+      @message = Message.new
+    else
+    end
   end
 end

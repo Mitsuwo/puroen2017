@@ -1,12 +1,14 @@
 <div class="message"><br><br>
-  <h3 style="color:white;vertical-align:bottom;">お問い合わせ</h3>
+  <h3 style="color:white;vertical-align:bottom;">選書ツアーに参加する</h3>
   <div class="message-box">
-    <div class="message-content">
-      <%= simple_form_for @message do |f| %><br><br><br><br>
-        <%= f.input :title, label: 'タイトル' %>
-        <%= f.input :body, label: '本文' %>
-        <%= f.button :submit, '送信する' %>
-      <% end %>
+    <div class="message-content"><br><br>
+      <p>選書ツアーに参加するためには、下記フォームから参加申請をしてください</p>
+      <p>後日、選書権限と選書可能冊数の情報が与えられます</p>
+        <%= simple_form_for @message do |f| %><br><br>
+          <%= f.input :title, label: 'メールアドレス' %>
+          <%= f.input :body, label: '本文', placeholder: '例：選書ツアーへの参加を希望します' %>
+          <%= f.button :submit, '申請する' %>
+        <% end %>
     </div>
   </div>
 </div>

@@ -20,6 +20,8 @@ end
 end
 
 User.create(id:1, email:'g031n061@s.iwate-pu.ac.jp', password:'password', name:"近藤充真")
+User.create(id:2, email:'g031o124@s.iwate-pu.ac.jp', password:'password', name:"芳賀康太")
+User.create(id:3, email:'g031o088@s.iwate-pu.ac.jp', password:'password', name:"鈴木一哉")
 Book.create(
     id:1,
     name:'超速! Webページ速度改善ガイド ── 使いやすさは「速さ」から始まる (WEB+DB PRESS plus) ',
@@ -797,3 +799,13 @@ Book.create(
     image_url:'http://www.shizenkagaku.com/igakutoyakugaku/images/2014-71-11.jpg',
     category_id:14
   )
+
+  Book.create(
+      id:43,
+      name:'An Abundance of Katherines ',
+      publisher:'New York Times Bestseller',
+      publish_date:'12/13/2017',
+      description:'When it comes to relationships, Colin Singleton’s type is girls named Katherine. And when it comes to girls named Katherine, Colin is always getting dumped. Nineteen times, to be exact. On a road trip miles from home, this anagram-happy, washed-up child prodigy has ten thousand dollars in his pocket, a bloodthirsty feral hog on his trail, and an overweight, Judge Judy–loving best friend riding shotgun—but no Katherines. Colin is on a mission to prove The Theorem of Underlying Katherine Predictability, which he hopes will predict the future of any relationship, avenge Dumpees everywhere, and finally win him the girl. Love, friendship, and a dead Austro-Hungarian archduke add up to surprising and heart-changing conclusions in this ingeniously layered comic novel about reinventing oneself.',
+      image_url:'https://images-na.ssl-images-amazon.com/images/I/517y5Cz1S5L._SX331_BO1,204,203,200_.jpg',
+      category_id:0
+    )
