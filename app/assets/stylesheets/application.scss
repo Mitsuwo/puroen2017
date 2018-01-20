@@ -30,6 +30,12 @@
 p {
   color: #808080;
 }
+.alert:before {
+  content: "選書する";
+}
+.secondary:before {
+  content: "選書しました";
+}
 .circle {
   width: 300px;
   height: 300px;
@@ -190,22 +196,6 @@ ul.list-nav li {
   width: 60%;
   position: relative;
   top: 200px;
-}
-.panel-table {
-  display: table;
-  width: 90%;
-  margin: auto;
-}
-.panel-image {
-  display: table-cell;
-  width: 30%;
-  margin: auto;
-}
-.panel-desc {
-  display: table-cell;
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
 }
 .book {
 	height: 350px;

@@ -2,19 +2,17 @@
   <div class="" id="choose-link-<%= book.id %>">
     <% if current_user.chooses.find_by(book_id: book.id) %>
       <%= link_to delete_choose_path(book.id), method: :delete, remote: true do %>
-      <div class="fi-minus" id="choose-<%= book.id %>">
-        <%= book.chooses.count.to_s %>
+      <div class="button secondary" id="choose-<%= book.id %>">
       </div>
       <% end %>
     <% else %>
       <%= link_to post_choose_path(book.id), method: :post, remote: true do %>
-      <div class="fi-plus" id="choose-<%= book.id %>">
-        <%= book.chooses.count.to_s %>
+      <div class="button alert" id="choose-<%= book.id %>">
       </div>
       <% end %>
     <% end %>
 <% else %>
-  <div class="fi-plus">
-    <%= book.chooses.count.to_s %>
+  <div class="button secondary">
+    ログインしてください
   </div>
 <% end %>

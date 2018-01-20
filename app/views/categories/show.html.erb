@@ -9,9 +9,9 @@
     <div class="columns large-8">
       <div><%= @book.publisher %>(著)</div><br><br>
       <div><%= @book.description %></div>
-      <div>
-        <%= render partial: 'books/books', locals: { book: @book } %>
-      </div>
     </div>
-  </div>
+  </div><br><br>
+  <div>
+    <%= render partial: 'books/books', locals: { book: @book } %>
+  </div><br><br>
 </div>
