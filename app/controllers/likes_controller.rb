@@ -7,7 +7,7 @@ class LikesController < ApplicationController
   end
 
   def unlike
-    like = current_user.likes.new(user_id: current_user.id, book_id: @book.id)
+    like = current_user.likes.find_by(user_id: current_user.id, book_id: @book.id)
     like.destroy
   end
 

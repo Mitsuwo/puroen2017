@@ -36,6 +36,12 @@ p {
 .secondary:before {
   content: "選書しました";
 }
+.unlike {
+  color: gray;
+}
+.liked {
+  color: red;
+}
 .circle {
   width: 300px;
   height: 300px;
