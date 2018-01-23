@@ -15,9 +15,14 @@
 
   </div>
   <br><br>
-  <div>
-    <%= render partial: 'books/books', locals: { book: @book } %>
-    <%= render partial: 'books/render_likes', locals: { book: @book } %>
+  <div class="row">
+    <div class="columns large-offset-8 large-2">
+      <%= render partial: 'books/render_likes', locals: { book: @book } %>
+    </div>
+    <div class="columns large-2">
+      <br>
+      <%= render partial: 'books/books', locals: { book: @book } %>
+    </div>
   </div>
   <br><br>
 </div>

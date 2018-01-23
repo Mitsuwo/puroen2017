@@ -1,14 +1,19 @@
 <div class="row set">
   <h1>マイページ</h1>
-  <div class="panel columns large-5">
+  <div class="panel columns large-6" style="text-align:center;">
     <h3><%= @user.name %>さんが選書した本</h3>
-    <% current_user.books.each do |book| %>
-      <a href="/categories/<%= book.category_id %>" >
-        <%= image_tag book.image_url %>
+    <% @chooses.each do |choose| %>
+      <a href="/categories/<%= choose.book_id %>" >
+        <%= image_tag Book.find(choose.book_id).image_url %>
       </a>
     <% end %>
   </div>
-  <div class="panel columns large-7">
-    <h3><%= @user.name %>さんがいいねした投稿</h3>
+  <div class="panel columns large-6" style="text-align:center;">
+    <h3><%= @user.name %>さんが<i class="fa fa-heart liked"></i>した投稿</h3>
+    <% @likes.each do |like| %>
+      <a href="/categories/<%= like.book_id %>" >
+        <%= image_tag Book.find(like.book_id).image_url %>
+      </a>
+    <% end %>
   </div>
 </div>
