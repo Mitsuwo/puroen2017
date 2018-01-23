@@ -27,6 +27,12 @@
 	box-shadow: 3px 3px 5px 6px #ccc;
 	padding: 1.5em 1.25em;
 }
+.parent {
+  overflow:auto;
+  height: 400px;
+}
+.child {
+}
 p {
   color: #808080;
 }
@@ -34,7 +40,7 @@ p {
   content: "選書する";
 }
 .secondary:before {
-  content: "選書しました";
+  content: "選書済み";
 }
 .unlike {
   color: gray;

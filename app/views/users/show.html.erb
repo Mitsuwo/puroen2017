@@ -1,19 +1,23 @@
 <div class="row set">
-  <h1>マイページ</h1>
-  <div class="panel columns large-6" style="text-align:center;">
-    <h3><%= @user.name %>さんが選書した本</h3>
-    <% @chooses.each do |choose| %>
-      <a href="/categories/<%= choose.book_id %>" >
-        <%= image_tag Book.find(choose.book_id).image_url %>
-      </a>
-    <% end %>
+  <h1 style="text-align:center;">マイページ</h1><br>
+  <div class="columns large-6" style="text-align:center;">
+    <h3><%= @user.name %>さんが選書した本</h3><hr>
+    <div class="parent">
+      <% @chooses.each do |choose| %>
+        <a href="/categories/<%= choose.book_id %>" class="child">
+          <%= image_tag Book.find(choose.book_id).image_url, class: 'book' %>
+        </a>
+      <% end %>
+    </div>
   </div>
-  <div class="panel columns large-6" style="text-align:center;">
-    <h3><%= @user.name %>さんが<i class="fa fa-heart liked"></i>した投稿</h3>
-    <% @likes.each do |like| %>
-      <a href="/categories/<%= like.book_id %>" >
-        <%= image_tag Book.find(like.book_id).image_url %>
-      </a>
-    <% end %>
+  <div class="columns large-6" style="text-align:center;">
+    <h3><%= @user.name %>さんが<i class="fa fa-heart liked"></i>した本</h3><hr>
+    <div class="parent">
+      <% @likes.each do |like| %>
+        <a href="/categories/<%= like.book_id %>" class="child" >
+          <%= image_tag Book.find(like.book_id).image_url, class: 'book' %>
+        </a>
+      <% end %>
+    </div>
   </div>
 </div>
