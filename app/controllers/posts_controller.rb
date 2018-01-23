@@ -9,7 +9,14 @@ class PostsController < ApplicationController
 
   def show
     @comments = @post.comments
-    @comment = @comments.new
+    @comment = Comment.new
+    @is_own_post = false
+    if user_signed_in?
+      @like = Like.where(user_id: current_user.id)
+      if @post.user.id == current_user.id
+        @is_own_post = true
+      end
+    end
   end
 
   def new

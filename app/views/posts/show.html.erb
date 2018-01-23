@@ -1,29 +1,28 @@
-<div class="panel" style="top:120px;position:relative;">
-  <div class="panel-table">
-    <div class="panel-image">
-      <p>
-        <%= image_tag @post.image_url %>
-      </p>
+<div class="set" style="top:120px;position:relative;">
+  <h2 style="text-align:center;"><%= @post.user.name %>さんのおすすめ!</h2><br>
+  <div class="row">
+    <div class="columns large-4">
+      <%= image_tag @post.image_url, style: "width:100%;" %>
     </div>
-    <div class="panel-desc">
-      <h4><%= @post.name %></h4>
-      <h5><%= @post.publisher %>より出版</h5>
-      <p><%= @post.user.name %></p>
-      <p>レート</p>
-      <div><%= @post.rate %></div>
-      <div><%= @post.body %></div>
+    <div class="columns large-8">
+      <h3><strong><%= @post.name %></strong></h3>
+      <div style="color:#808080;"><%= @post.publisher %>より出版</div><br><br>
+      <h3><%= @post.body %></h3>
     </div>
   </div>
-
-  <%= link_to 'Edit', edit_post_path(@post) %> |
-  <%= link_to 'Back', posts_path %>
-  <br><hr><br>
-  <%= render 'comments/form' %>
-  <br>
-  <h3>コメント一覧</h3>
-  <% @comments.each do |comment| %>
-    <hr>
-    <%= comment.body %>
-    <%= comment.created_at %>
-  <% end %>
+  <div class="row" style="text-align:center;">
+    <% if @is_own_post %>
+      <%= link_to '編集する', edit_post_path(@post), class: 'button success' %>
+    <% else %>
+     <hr><br>
+     <%= render 'posts/comment_form' %>
+    <% end %>
+    <br><hr>
+    <h3>コメント一覧</h3>
+    <% @comments.each do |comment| %>
+      <hr>
+      <%= comment.body %>
+      <%= comment.created_at %>
+    <% end %>
+  </div>
 </div>

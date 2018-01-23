@@ -1,0 +1,9 @@
+<%= simple_form_for @comment do |f| %>
+  <div class="columns large-11">
+    <%= f.input :body, label: false, placeholder: "コメントを入力" %>
+  </div>
+  <%= f.hidden_field :post_id, id: @post.id %>
+  <div class="columns large-1" >
+    <%= f.button :submit, "コメントする" %>
+  </div>
+<% end %>
