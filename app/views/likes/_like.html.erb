@@ -1,0 +1,17 @@
+<% if user_signed_in? %>
+  <div class="" id="like-link-<%= book.id %>">
+    <% if current_user.likes.find_by(book_id: book.id) %>
+      <%= link_to unlike_path(book.id), method: :delete, remote: true do %>
+      <div class="button secondary" id="like-<%= book.id %>">
+        <p>いいね</p>
+      </div>
+      <% end %>
+    <% else %>
+      <%= link_to like_path(book.id), method: :post, remote: true do %>
+      <div class="button alert" id="like-<%= book.id %>">
+        <p>いいね</p>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>

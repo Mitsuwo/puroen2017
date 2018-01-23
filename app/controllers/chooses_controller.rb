@@ -15,7 +15,7 @@ class ChoosesController < ApplicationController
 
   def set_book_variables
     @book = Book.find(params[:book_id])
-    @id_name = "#choose-link-#{@book.id}"
+    @id_choose_name = "#choose-link-#{@book.id}"
     @id_choose = "#choose-#{@book.id}"
   end
 
