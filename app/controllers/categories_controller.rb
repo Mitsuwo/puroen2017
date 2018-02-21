@@ -10,6 +10,7 @@ class CategoriesController < ApplicationController
   def index
     @category = Category.find(params[:id])
     @books = @category.books
+    @pages = @books.page(params[:page])
   end
 
 end

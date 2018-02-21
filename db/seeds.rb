@@ -30,6 +30,9 @@ Category.create(id:10, name:"文学", icon:"pencil")
 User.create(id:1, email:'g031n061@s.iwate-pu.ac.jp', password:'password', name:"近藤充真")
 User.create(id:2, email:'g031o124@s.iwate-pu.ac.jp', password:'password', name:"芳賀康太")
 User.create(id:3, email:'g031o088@s.iwate-pu.ac.jp', password:'password', name:"鈴木一哉")
+User.create(id:4, email:'g031n130@s.iwate-pu.ac.jp', password:'password', name:"枷場裕太")
+User.create(id:5, email:'g031p055@s.iwate-pu.ac.jp', password:'password', name:"黒澤卓持")
+User.create(id:6, email:'g031p104@s.iwate-pu.ac.jp', password:'password', name:"対馬陣")
 Book.create(
     id:1,
     name:'超速! Webページ速度改善ガイド ── 使いやすさは「速さ」から始まる (WEB+DB PRESS plus) ',
